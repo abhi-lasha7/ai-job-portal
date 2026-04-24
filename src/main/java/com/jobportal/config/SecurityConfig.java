@@ -26,8 +26,16 @@ public class SecurityConfig {
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        // Public routes - anyone can access
+                        // Public routes
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers(
+                                org.springframework.http.HttpMethod.GET,
+                                "/api/jobs",
+                                "/api/jobs/*",
+                                "/api/jobs/search",
+                                "/api/jobs/trending",
+                                "/api/jobs/filter/**"
+                        ).permitAll()
                         // All other routes need login
                         .anyRequest().authenticated()
                 )
