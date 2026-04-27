@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-job-portal-backend
+    env: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: your_db_url
+      - key: SPRING_DATASOURCE_USERNAME
+        value: your_db_username
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: your_db_password
