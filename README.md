@@ -5,6 +5,9 @@ A full-stack Job Portal with AI Resume Screening built with Java Spring Boot and
 - **Frontend:** https://ai-job-portal-frontend-eta.vercel.app
 - **Backend:** https://ai-job-portal-backend-production.up.railway.app
 - **API Docs:** https://ai-job-portal-backend-production.up.railway.app/swagger-ui/index.html
+
+# 📸 Screenshots
+Add screenshots of your login, dashboard and jobs page!
   
 ## ✨ Features
 - 🔐 JWT Authentication with Role-based Access
