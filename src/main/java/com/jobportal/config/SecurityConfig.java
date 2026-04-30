@@ -60,13 +60,17 @@ public class SecurityConfig {
 
         config.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000",
-                "http://localhost:3001"
+                "http://localhost:3001",
+                "https://ai-job-portal-frontend-eta.vercel.app",
+                "https://ai-job-portal-frontend.vercel.app",
+                "https://ai-job-portal-frontend-b3ox.vercel.app"
         ));
         config.setAllowedMethods(Arrays.asList(
                 "GET", "POST", "PUT", "DELETE", "OPTIONS"
         ));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
+        config.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
